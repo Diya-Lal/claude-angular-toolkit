@@ -40,6 +40,19 @@ Located in `commands/`. Type `/` in Claude Code to autocomplete.
 
 ---
 
+## Skills
+
+Located in `skills/`. Always-on knowledge — automatically applied by Claude while writing code, no command needed.
+
+| Skill | What it Enforces Passively |
+|---|---|
+| `angular-standards` | `OnPush` everywhere, standalone components, signals over RxJS, `toSignal()`, `trackBy`, no method calls in templates |
+| `nx-workspace` | Nx project.json structure, affected commands, cache reset, path aliases, `dependsOn` pitfalls |
+| `primeng-v21` | Correct PrimeNG 21 imports (no `*Module`), removed inputs (`[field]`, `[loading]`), theming via `@primeuix/themes`, MFE provider rules |
+| `mfe-patterns` | Async bootstrap, Angular singleton sharing, shell providers, `resolve()` in exposes, no circular `dependsOn`, cross-framework script tag loading |
+
+---
+
 ## Stack
 
 - Angular 17+ (standalone components, signals, `OnPush`)
