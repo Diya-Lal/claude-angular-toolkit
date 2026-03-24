@@ -1,0 +1,20 @@
+# Runtime & cache — never commit these
+cache/
+backups/
+debug/
+downloads/
+file-history/
+paste-cache/
+shell-snapshots/
+session-env/
+ide/
+plugins/
+telemetry/
+
+# Session history & stats
+history.jsonl
+stats-cache.json
+mcp-needs-auth-cache.json
+
+# Project-specific memory (may contain sensitive context)
+projects/
