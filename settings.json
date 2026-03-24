@@ -7,5 +7,24 @@
     "skill-creator@claude-plugins-official": true,
     "nx-netlify-deploy@claude-plugins-official": true,
     "vercel@claude-plugins-official": true
+  },
+  "permissions": {
+    "deny": [
+      "Bash(git push --force*)",
+      "Bash(git reset --hard*)",
+      "Bash(git branch -D*)",
+      "Bash(git checkout -- *)",
+      "Bash(git clean -f*)",
+      "Bash(npm publish*)",
+      "Bash(ng deploy*)",
+      "Bash(nx deploy*)",
+      "Bash(rm -rf*)",
+      "Write(**/angular.json)",
+      "Write(**/tsconfig*.json)",
+      "Write(**/package.json)",
+      "Write(/Users/diya/.claude/settings.json)",
+      "Write(/Users/diya/.claude/agents/*)",
+      "Write(/Users/diya/.claude/commands/*)"
+    ]
   }
 }
