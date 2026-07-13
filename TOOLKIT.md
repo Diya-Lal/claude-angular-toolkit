@@ -39,6 +39,9 @@ Type `/` in Claude Code to autocomplete these.
 | `/build-fix` | `build-error-resolver` | Fix build errors with minimal changes |
 | `/tdd` | `tdd-guide` | Write tests first, then implement |
 | `/research-claude-repo` | — | Research a Claude-related GitHub repo |
+| `/build-loop` | — | Fix build errors in a loop until green (max 10 iterations) |
+| `/lint-loop` | — | Fix lint errors in a loop until clean (max 10 iterations) |
+| `/test-loop` | — | Fix failing tests in a loop until all pass (max 10 iterations) |
 
 ---
 
@@ -88,7 +91,10 @@ Results consolidate into a unified report with a final verdict: **APPROVE / WARN
 ### During Development
 
 ```
-/build-fix   →  When ng build or tsc fails
+/build-fix   →  When ng build or tsc fails (single pass)
+/build-loop  →  When ng build fails with many errors (iterates until green)
+/lint-loop   →  When eslint shows a wall of errors (iterates until clean)
+/test-loop   →  When multiple tests fail (iterates until all pass)
 /review      →  Quick check after writing code
 /ts-review   →  Deep dive on type safety
 ```
@@ -117,7 +123,10 @@ Results consolidate into a unified report with a final verdict: **APPROVE / WARN
 | "How should I structure this feature?" | `/plan` then `/architect` |
 | "Is my code good?" | `/review` |
 | "Is it ready to merge?" | `/full-review` |
-| "Build is broken" | `/build-fix` |
+| "Build is broken (1-2 errors)" | `/build-fix` |
+| "Build is broken (many errors)" | `/build-loop` |
+| "Lint is a mess" | `/lint-loop` |
+| "Multiple tests failing" | `/test-loop` |
 | "Codebase feels messy" | `/refactor` |
 | "Are there security issues?" | `/security` |
 | "Are my types correct?" | `/ts-review` |
